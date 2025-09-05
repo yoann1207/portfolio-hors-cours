@@ -94,8 +94,34 @@
             height: 3px;
             background-color: var(--primary-color);
         }
-        .fade-in {
-            animation: fadeIn 1s ease forwards;
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        .skill-card i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+        .skill-card:hover i {
+            color: white;
         }
     </style>
 </head>
@@ -146,16 +172,32 @@
             <div class="section-title">
                 <h2>Mes compétences</h2>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Informatique niveau 1 (Montage PC et Installation OS Microsoft)</li>
-                <li class="list-group-item">Serveurs Debian (Samba, FOG, FTP...)</li>
-                <li class="list-group-item">Hyperviseur (Proxmox)</li>
-                <li class="list-group-item">Configuration de switch niveau 2 (Cisco, Netgear, HP)</li>
-            </ul>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-desktop"></i>
+                    <h5>Informatique niveau 1</h5>
+                    <p>Montage PC et Installation OS Microsoft</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h5>Serveurs Debian</h5>
+                    <p>Samba, FOG, FTP...</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h5>Hyperviseur</h5>
+                    <p>Proxmox</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h5>Configuration Switch L2</h5>
+                    <p>Cisco, Netgear, HP</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Les autres sections (projets, expérience, contact...) restent inchangées -->
+    <!-- Ici tu gardes toutes les autres sections (projets, expérience, contact, footer...) -->
 
     <!-- Bootstrap & JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
